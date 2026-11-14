@@ -1,0 +1,12 @@
+{
+  "name": "Свадьба — планировщик",
+  "short_name": "Свадьба",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fffaf7",
+  "theme_color": "#b0413e",
+  "lang": "ru",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
