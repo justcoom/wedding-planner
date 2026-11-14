@@ -10,6 +10,11 @@ self.addEventListener('install', (e) => e.waitUntil(caches.delete('wp-shell-v1')
 
 self.addEventListener('activate', (e) => e.waitUntil(clients.claim()))
 
+// Обновление по команде из приложения (баннер «Доступна новая версия»)
+self.addEventListener('message', (e) => {
+  if (e.data?.type === 'SKIP_WAITING') self.skipWaiting()
+})
+
 self.addEventListener('fetch', (e) => {
   const url = new URL(e.request.url)
   if (url.origin !== location.origin) return
